@@ -1,17 +1,17 @@
 import React from 'react'
 
-type SelectOption {
+type SelectOption = {
     label: string
     value: string
 }
 
-type SelectProps {
+type SelectProps = {
+    options: (value: SelectOption | undefined) => void
     value: SelectOption[]
     onChange: SelectOption
-    options: (value: SelectOption | undefined) => void
 }
 
-export default Select = ({ value, onChange, options }: SelectProps) => {
+export function Select({ value, onChange, options }: SelectProps) {
   return (
     <div>Select</div>
   )
